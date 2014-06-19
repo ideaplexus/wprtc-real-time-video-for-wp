@@ -1,4 +1,4 @@
-=== WebRTC Video streaming for WP ===
+=== wpRTC - WebRTC for WordPress ===
 Contributors: guavaworks
 Donate link: http://www.codingofficehours.com/coh/#/teacher/23
 Tags: webrtc, video, video chat, webcam
@@ -14,7 +14,7 @@ WebRTC for WordPress allows you to easily create a video chat room utilizing web
   
 WebRTC or WEb Real Time Communication is an open project that enables browsers with RTC capabilities to connect with video, audio, and even screen sharing.  
   
-Install the plugin and use the simple shortcode [wpRTC room_name="room"] to create multiple rooms for users to interact with each other using video.
+Install the plugin and use the simple shortcode [wpRTC room_name="room"] to create multiple video chat rooms for users to interact with each other.
 
 [Documentation](http://roysivan.com/wp-webrtc) available, please check it for shortcode use, and wtcPRO version tips. 
 

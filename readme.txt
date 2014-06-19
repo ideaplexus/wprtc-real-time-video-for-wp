@@ -16,6 +16,8 @@ WebRTC or WEb Real Time Communication is an open project that enables browsers w
   
 Install the plugin and use the simple shortcode [wpRTC room_name="room"] to create multiple rooms for users to interact with each other using video.
 
+[Documentation](http://roysivan.com/wp-webrtc) available, please check it for shortcode use, and wtcPRO version tips. 
+
 
 == Installation ==
 

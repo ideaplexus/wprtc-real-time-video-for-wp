@@ -8,7 +8,7 @@ Stable tag: 0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WebRTC for WordPress allows you to easily create a video chat room utilizing webRTC, and is supported by most latest versions of modern browsers.
+WebRTC for WordPress allows you to easily create a video chat room utilizing webRTC, and is supported by most modern browsers.
 
 == Description ==
   

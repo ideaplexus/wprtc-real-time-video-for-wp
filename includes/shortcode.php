@@ -19,7 +19,6 @@ function webRTCsc( $atts ){
 	$a = shortcode_atts( array(
 		'room_name' => '',
 		'room_title' => '',
-		'screen_sharing' => false
 	), $atts );
 
 	// ROOM NAME
@@ -76,7 +75,6 @@ function webRTCsc( $atts ){
 		echo '<a class="mute fa fa-microphone" data-action="mute">&nbsp;</a>';
 		if(isset($select)) { echo $select; }
 	echo '</div>';
-	if($a['screen_sharing'] == 'on') { echo '<button id="screenSharingbutt">Screen Sharing</button>'; }
 	return ob_get_clean();
 }
 

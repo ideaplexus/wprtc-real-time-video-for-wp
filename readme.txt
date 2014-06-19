@@ -32,6 +32,10 @@ Install the plugin and use the simple shortcode `[wpRTC room_name="room"]` to cr
 = What is WebRTC? =
 [WebRTC](http://www.webrtc.org) WebRTC is a free, open project that enables web browsers with Real-Time Communications (RTC) capabilities via simple JavaScript APIs. The WebRTC components have been optimized to best serve this purpose.
 
+== Screenshots ==
+  
+1. Make sure to check the newly added menu for updates, tips, and settings.
+2. Styling options are still being added, style the video player any way you want it!
 
 == Changelog ==
 

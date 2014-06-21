@@ -35,7 +35,8 @@ function webRTCsc( $atts ){
 		'rtcH' => '500px',
 		'rtcRH' => '200px',
 		'rtcRvW' => '100px',
-		'private_msg' => 'You must be logged in to view this video stream'
+		'private_msg' => 'You must be logged in to view this video stream',
+		'rtcClass' => ''
 	);
 	
 	if(get_option('rtcBG')) { $rtcOptions['rtcBG'] = get_option('rtcBG'); }
@@ -46,6 +47,8 @@ function webRTCsc( $atts ){
 
 	if(get_option('rtcRH')) { $rtcOptions['rtcRH'] = get_option('rtcRH'); }
 	if(get_option('rtcRvW')) { $rtcOptions['rtcRvW'] = get_option('rtcRvW'); }
+	
+	if(get_option('rtcClass')) { $rtcOptions['rtcClass'] = get_option('rtcClass'); }
 
 	if(get_option('rtc_main_private_msg')) { $rtcOptions['private_msg'] = get_option('rtc_main_private_msg'); }
 	
@@ -68,12 +71,11 @@ function webRTCsc( $atts ){
 	ob_start();
 	echo $inlineStyle;
 	if($a['room_title'] !== '') { echo '<h2 class="videoTitle">'.$a['room_title'].'</h2>'; }
-	echo '<div class="rtcVideoContainer">';
+	echo '<div class="rtcVideoContainer '.$rtcOptions['rtcClass'].'">';
 		echo '<video data-room="'.$roomName.'" class="rtcVideoPlayer" id="localVideo" oncontextmenu="return false;"></video>';
 		echo '<div id="localVolume" class="volumeBar"></div>';
 		echo '<div id="remoteVideos"></div>';
 		echo '<a class="mute fa fa-microphone" data-action="mute">&nbsp;</a>';
-		if(isset($select)) { echo $select; }
 	echo '</div>';
 	return ob_get_clean();
 }

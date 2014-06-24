@@ -61,7 +61,7 @@ function webRTCsc( $atts ){
 	}
 	
 	$inlineStyle = '<style>';
-		$inlineStyle .= '.rtcVideoContainer { position: relative; height: '.$rtcOptions['rtcH'].'; width: '.$rtcOptions['rtcW'].'; }';
+		$inlineStyle .= '.rtcVideoContainer { position: relative; height: auto; width: '.$rtcOptions['rtcW'].'; }';
 		$inlineStyle .= 'video.rtcVideoPlayer{ background: '.$rtcOptions['rtcBG'].'; border: '.$rtcOptions['rtcBW'].' solid '.$rtcOptions['rtcBC'].'; height: '.$rtcOptions['rtcH'].'; width: '.$rtcOptions['rtcW'].';}';
 		$inlineStyle .= '#remoteVideos{height: '.$rtcOptions['rtcRH'].'; width:'.$rtcOptions['rtcW'].'}';
 		$inlineStyle .= '#remoteVideos video {float: left; height:100px; width:'.$rtcOptions['rtcRvW'].'}';

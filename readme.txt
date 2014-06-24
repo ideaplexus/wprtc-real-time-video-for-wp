@@ -4,7 +4,7 @@ Donate link: http://www.codingofficehours.com/coh/#/teacher/23
 Tags: webrtc, video, video chat, webcam
 Requires at least: 3.9
 Tested up to: 3.9.1
-Stable tag: 0.1
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,11 @@ Install the plugin and use the simple shortcode `[wpRTC room_name="room"]` to cr
 
 = What is WebRTC? =
 [WebRTC](http://www.webrtc.org) WebRTC is a free, open project that enables web browsers with Real-Time Communications (RTC) capabilities via simple JavaScript APIs. The WebRTC components have been optimized to best serve this purpose.
+
+= I installed it, but only see a black screen =
+If you have the plugin isntalled and tried using the shortcode and only see a black screen, make sure you remember to check for permissions from your browser.  
+[Screenshot of permissoin on Chrome](http://roysivan.com/wp-webrtc/videoPermission.png)  
+
 
 == Screenshots ==
   

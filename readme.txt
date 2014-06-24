@@ -46,3 +46,8 @@ If you have the plugin isntalled and tried using the shortcode and only see a bl
 
 = 0.1 =
 * Shortcode and initial build
+  
+= 1.0.1 =
+* Upgrade to version 1
+* Documentation update
+* Settings updates

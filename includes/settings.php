@@ -15,6 +15,9 @@ function wprtc_main_options() {
         echo '<table width="100%" cellpadding="5" cellspacing="5" border="0">';
             echo '<tr>';
                 echo '<td width="50%" valign="top">';
+                	echo '<h3>Documentation</h3>';
+                	echo '<p> In depth documentation available online <br/>';
+                	echo '<a class="button-primary" href="http://www.roysivan.com/wp-webrtc" target="_blank">View Documentation</a></p>';
                     echo '<h3>Shortcode</h3>';
                     echo '<p>The plugin comes with a built in shortcode to help you with setting up your videos easily</p>';
                     echo '<pre><code>[wpRTC]</code></pre>';
@@ -25,7 +28,7 @@ function wprtc_main_options() {
                     echo '<code>[wpRTC room_title="..."]</code><br/><em>leave blank to remove title</em></p>';
                     // room_name
                     echo '<p><strong>room_name</strong> - set up your room name or multiple rooms. <br/><code>[wpRTC room_name="testing"]</code> </p>';
-                    echo '<p><code>[wpRTC room_name="testing, testingAgain, anotherRoom"]</code> - <em>wpRTC PRO</em></p>';
+                    echo '<p><code>[wpRTC room_name="testing, testingAgain, anotherRoom"]</code> - <em>This feature adds in a drop down menu under the video so users can change rooms using the same page and video code. wpRTC PRO</em></p>';
                     // privacy
                     echo '<p><strong>privacy</strong> - override default settings.<br/>';
                     echo '<code>[wpRTC privacy="on"]</code> - <em>wpRTC PRO</em></p>';
@@ -63,6 +66,9 @@ function wprtc_settings_options() {
     echo '<style> .feature-filter { padding: 20px; } label,strong { font-weight: bold; } select,textarea{ width: 400px; } textarea {height: 200px; }</style>';
     echo '<div class="wrap feature-filter">';
         echo '<h2>wpRTC - Real Time Video Sharing for WordPress</h2>';
+        echo '<p>You do not need to make any changes here, default styling is setup.<br/>';
+        echo '<strong>Local Video</strong> - your video stream<br/>';
+        echo '<strong>Remote Video</strong> - video stream of peers connected to your video room</p>';
         echo '<form name="wprtcSettings" method="post" action="">';
             echo '<p><label>Private Videos</label><br/>';
             echo '<select name="rtc_main_private">';

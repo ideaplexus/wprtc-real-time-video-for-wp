@@ -51,3 +51,6 @@ If you have the plugin isntalled and tried using the shortcode and only see a bl
 * Upgrade to version 1
 * Documentation update
 * Settings updates
+
+= 1.1 =
+* Added Video Mute

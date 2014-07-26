@@ -1,6 +1,8 @@
 rtcVideoContainer { display: block; }
+
+/** MUTE BUTTON **/
 .rtcVideoContainer .mute { 
-	color: #FFF;
+	color: #056a21;
 	cursor: pointer;
 	display: block;
 	font-size: 30px;
@@ -14,4 +16,21 @@ rtcVideoContainer { display: block; }
 	color: red;
 }
 
+/** VIDEO BUTTON **/
+.rtcVideoContainer .videoMute { 
+	color: #056a21;
+	cursor: pointer;
+	display: block;
+	font-size: 30px;
+	position: absolute;
+	right: 45px;
+	text-decoration: none;
+	top: 10px;
+}
+.rtcVideoContainer .videoMute:hover,
+.rtcVideoContainer .videoMute.muted { 
+	color: red;
+}
+
 #remoteVideos video { cursor: pointer; }
+form#roomChange select { cursor: pointer; padding: 5px 0; width: 100%; }

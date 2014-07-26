@@ -72,10 +72,9 @@ function webRTCsc( $atts ){
 	echo $inlineStyle;
 	if($a['room_title'] !== '') { echo '<h2 class="videoTitle">'.$a['room_title'].'</h2>'; }
 	echo '<div class="rtcVideoContainer '.$rtcOptions['rtcClass'].'">';
-		echo '<video data-room="'.$roomName.'" class="rtcVideoPlayer" id="localVideo" oncontextmenu="return false;"></video>';
+		echo '<video title="hello" data-room="'.$roomName.'" class="rtcVideoPlayer" id="localVideo" oncontextmenu="return false;"></video>';
 		echo '<div id="localVolume" class="volumeBar"></div>';
 		echo '<div id="remoteVideos"></div>';
-		echo '<a class="mute fa fa-microphone" data-action="mute">&nbsp;</a>';
 	echo '</div>';
 	return ob_get_clean();
 }

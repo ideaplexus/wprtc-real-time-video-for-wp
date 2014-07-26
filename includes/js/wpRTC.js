@@ -19,21 +19,40 @@ webrtc.on('readyToCall', function () {
 	webrtc.joinRoom(room);
 });
 
-webrtc.on('joinedRoom', function(){
-	localSrc = $('#localVideo').attr('src');
+webrtc.on('addMute', function(){
+	if($('.rtcVideoCOntainer .mute').length < 1){
+		$('.rtcVideoContainer').append('<a class="mute fa fa-microphone" data-action="mute" title="audio mute">&nbsp;</a><a class="videoMute fa fa-power-off" data-action="mute" title="video mute">&nbsp;</a>');
+	}
 });
 
-webrtc.on('mute', function(){
-	webrtc.mute();
+webrtc.on('joinedRoom', function( name ){
+	webrtc.emit('addMute');
+	//localSrc = $('#localVideo').attr('src');
 });
-webrtc.on('unmute', function(){
-	webrtc.unmute();
-});
+
 webrtc.on('videoRemoved', function(video, peer) {
 	var localVideo = $('#localVideo');
 	var src2 = localVideo.attr('src');
 
 	if($(video).attr('id').indexOf('incoming') > 0) { localVideo.attr('src', localSrc); }
+});
+
+webrtc.on('mute', function(){
+	$('.mute').data('action', 'unmute').removeClass('fa-microphone').addClass('fa-microphone-slash muted');
+	webrtc.mute();
+});
+webrtc.on('unmute', function(){
+	$('.mute').data('action', 'mute').removeClass('fa-microphone-slash muted').addClass('fa-microphone');
+	webrtc.unmute();
+});
+
+webrtc.on('pauseVideo', function(){
+	webrtc.pauseVideo();
+	$('.videoMute').data('action', 'mute').addClass('muted');
+});
+webrtc.on('resumeVideo', function(){
+	webrtc.resumeVideo();
+	$('.videoMute').data('action', 'unmute').removeClass('muted');
 });
 
 
@@ -44,18 +63,26 @@ $(document).ready(function($){
     $('form#roomChange').submit();
   });
 
-  $('.mute').on('click', function(e){
+  $('body').on('click', '.mute', function(e){
   	var action = $(this).data('action');
   	if(action == 'mute'){
-		webrtc.emit('mute'); 	
-		$(this).data('action', 'unmute').removeClass('fa-microphone').addClass('fa-microphone-slash muted');
+		webrtc.emit('mute');
   	} else {
-	  	webrtc.emit('unmute'); 	
-		$(this).data('action', 'mute').removeClass('fa-microphone-slash muted').addClass('fa-microphone');
+	  	webrtc.emit('unmute');
   	}
   });
   
-  $('#remoteVideos').on('click', 'video', function(){
+  $('body').on('click', '.videoMute', function(e){
+  	var action = $(this).data('action');
+  	if(action == 'mute'){
+		webrtc.emit('resumeVideo');
+  	} else {
+	  	webrtc.emit('pauseVideo'); 	
+  	}
+  });
+  
+  /*
+$('#remoteVideos').on('click', 'video', function(){
   	var localVideo = $('#localVideo');
 	var src = $(this).attr('src');
 	var src2 = localVideo.attr('src');
@@ -63,5 +90,6 @@ $(document).ready(function($){
 	localVideo.attr('src', src);
 	$(this).attr('src', src2);
   });
+*/
 
 });

@@ -3,7 +3,7 @@
  * Plugin Name: wpRTC - WebRTC for WordPress
  * Plugin URI: http://roysivan.com/wp-webrtc/
  * Description: This plugin will allow you to easily create peer-to-peer video using shortcode, as users enter the page they will enter the video chat
- * Version: 1.0.1
+ * Version: 1.1
  * Author: Roy Sivan
  * Author URI: http://www.roysivan.com
  * License: GPL2
@@ -13,7 +13,7 @@ require_once('includes/settings.php');
 require_once('includes/shortcode.php');
 
 
-define('WordPressWebRTC', '1.0.1'); 
+define('WordPressWebRTC', '1.1'); 
 
 class WordPressWebRTC {
 	function WordPressWebRTC(){
